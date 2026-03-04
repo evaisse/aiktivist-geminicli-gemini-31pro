@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiktivist</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar" class="panel">
+            <div class="header">
+                <h2>aiktivist.</h2>
+                <button id="logout-btn" class="action-btn">Logout</button>
+            </div>
+            <div class="nav-actions">
+                <button id="new-chat-btn" class="action-btn accent">+ New Session</button>
+            </div>
+            <ul id="conversation-list"></ul>
+        </aside>
+        
+        <main id="main-content" class="panel">
+            <div id="auth-view" class="view hidden">
+                <form id="auth-form" class="center-form">
+                    <h2>Authentication required</h2>
+                    <input type="text" id="username" placeholder="Username" required autocomplete="username">
+                    <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+                    <div class="actions">
+                        <button type="button" id="login-btn">Login</button>
+                        <button type="button" id="register-btn">Register</button>
+                    </div>
+                    <div id="auth-error" class="error"></div>
+                </form>
+            </div>
+
+            <div id="chat-view" class="view hidden">
+                <div id="chat-messages"></div>
+                <div class="input-area">
+                    <form id="chat-form">
+                        <textarea id="message-input" placeholder="Type a message..." rows="1" autofocus></textarea>
+                        <button type="submit" id="send-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="empty-view" class="view center-content">
+                <p>Select or start a new conversation.</p>
+            </div>
+        </main>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
